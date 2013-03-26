@@ -4,3 +4,11 @@
 *.jar
 *.war
 *.ear
+/bin
+/.classpath
+/.project
+/build
+/.gradle
+/.settings
+/reverse_words_output.txt
+/spelling_output.txt
