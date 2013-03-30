@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<projectSuggestions>
+<declaringtype type="java.lang.String">
+<method isActive="true" isStatic="false" name="asListOfIntegers" type="java.util.List">
+<parameters useNamedArguments="false"/>
+<doc>Converts the String of integers (separated by spaces) into a List of integers.</doc>
+</method>
+</declaringtype>
+<declaringtype type="java.io.File">
+<method isActive="true" isStatic="false" name="clear" type="java.io.File">
+<parameters useNamedArguments="false"/>
+<doc>equivalent to setText("") on the file but returns a file object to avoid having to clear on next line/statement.</doc>
+</method>
+</declaringtype>
+</projectSuggestions>
