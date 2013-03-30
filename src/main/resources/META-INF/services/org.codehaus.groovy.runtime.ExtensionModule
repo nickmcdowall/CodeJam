@@ -1,0 +1,3 @@
+moduleName = code-jam-module
+moduleVersion = 1.0
+extensionClasses = extensions.CodeJamExtensions

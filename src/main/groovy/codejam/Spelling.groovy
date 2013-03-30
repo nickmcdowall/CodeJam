@@ -6,7 +6,7 @@ package codejam;
  */
 	
 	File inputFile = new File('src/main/resources/spelling_input.txt')
-	File outputFile = new File('spelling_output.txt')
+	File outputFile = new File('spelling_output.txt').clear()
 
 	Map characterMap = [:]
 	
@@ -45,8 +45,6 @@ package codejam;
 		}
 		return insertPauses(output).replaceAll(tempSeparator, '')
 	}
-
-	outputFile.setText("")
 
 	inputFile.eachLine(0) { line, lineNum ->
 		if(lineNum > 0){ 

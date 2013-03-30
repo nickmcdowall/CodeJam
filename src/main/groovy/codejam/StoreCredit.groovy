@@ -6,8 +6,7 @@
 import groovy.time.*
 
 File inputFile = new File('src/main/resources/store_credit_input.txt')
-File outputFile = new File('store_credit_output.txt')
-outputFile.setText("")
+File outputFile = new File('store_credit_output.txt').clear()
 
 def findCombination = { itemValue, credit ->
 	def efficientList = itemValue.findAll { it <= credit }
@@ -19,24 +18,21 @@ def findCombination = { itemValue, credit ->
 	return combination?: call(tail, credit)
 }
 
-def asListOfIntegers = { lineOfText ->
-	lineOfText.split(" ").collect { it.toInteger() }
-}
-
 def testCase = 1
 def toOutputFile = { result -> 
 	outputFile << "Case #${testCase++}: ${result}\n"
 }
 
-def process = { inputLinesForTestCase ->
-	def credit = inputLinesForTestCase[0].toInteger()
-	def itemValues = asListOfIntegers(inputLinesForTestCase[2])
+def process = { inputLines ->
+	def credit = inputLines[0].toInteger()
+	def itemValues = inputLines[2].asListOfIntegers()
 	def itemsThatMakeUpCredit = findCombination(itemValues, credit)
 	def indexOfItems =  itemValues.findIndexValues { 
 		itemsThatMakeUpCredit.contains(it) 
 	}.collect { it + 1 }
 	toOutputFile(indexOfItems.join(" "))
 }
+
 
 def startTime = new Date()
 
