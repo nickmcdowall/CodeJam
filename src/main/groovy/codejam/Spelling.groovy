@@ -27,9 +27,11 @@ package codejam;
 	('w'..'z').inject("9", putKeyAndGenerateValue)
 	(' ').inject("0", putKeyAndGenerateValue)
 	
+	def tempSeparator = ':'
+
 	def insertPauses = { text ->
 		buttons.each {
-			def pattern = /$it:$it/
+			def pattern = /${it}${tempSeparator}${it}/
 			def replacement = "$it $it"
 			text = text.replaceAll(pattern, 
 				replacement).replaceAll(pattern, replacement)
@@ -37,7 +39,6 @@ package codejam;
 		return text
 	}
 
-	def tempSeparator = ':'
 	def convert = { line ->
 		def output = line
 		characterMap.keySet().each {
@@ -48,9 +49,9 @@ package codejam;
 
 	inputFile.eachLine(0) { line, lineNum ->
 		if(lineNum > 0){ 
-			outputFile << "Case #${lineNum}: ${convert(line)}\n"
+			outputFile.addTestCaseResult(lineNum, convert(line))
 		}
 	}
 
 	println outputFile.getText()
-
+	

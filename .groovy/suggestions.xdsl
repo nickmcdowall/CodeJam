@@ -1,15 +1,45 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <projectSuggestions>
-<declaringtype type="java.lang.String">
-<method isActive="true" isStatic="false" name="asListOfIntegers" type="java.util.List">
+<declaringtype type="java.util.List">
+<method isActive="true" isStatic="false" name="ascending" type="java.util.List">
 <parameters useNamedArguments="false"/>
-<doc>Converts the String of integers (separated by spaces) into a List of integers.</doc>
+<doc/>
+</method>
+<method isActive="true" isStatic="false" name="descending" type="java.util.List">
+<parameters useNamedArguments="false"/>
+<doc/>
+</method>
+</declaringtype>
+<declaringtype type="java.lang.String">
+<method isActive="true" isStatic="false" name="asListOfBigIntegers" type="java.util.List&lt;java.math.BigInteger&gt;">
+<parameters useNamedArguments="false"/>
+<doc/>
+</method>
+<method isActive="true" isStatic="false" name="asListOfIntegers" type="java.util.List&lt;java.lang.Integer&gt;">
+<parameters useNamedArguments="false"/>
+<doc/>
 </method>
 </declaringtype>
 <declaringtype type="java.io.File">
 <method isActive="true" isStatic="false" name="clear" type="java.io.File">
 <parameters useNamedArguments="false"/>
-<doc>equivalent to setText("") on the file but returns a file object to avoid having to clear on next line/statement.</doc>
+<doc/>
+</method>
+<method isActive="true" isStatic="false" name="addTestCaseResult" type="void">
+<parameters useNamedArguments="false"/>
+<doc/>
+</method>
+<method isActive="true" isStatic="false" name="codeJam" type="void">
+<parameters useNamedArguments="false"/>
+<doc>Takes input file, ignores first line, then collates given number of lines to pass into the given collection until all 
+lines have read.  The output of each call to the closure is added to the output file specified in the expected 
+code jam format.</doc>
+</method>
+</declaringtype>
+<declaringtype type="java.util.Date">
+<method isActive="true" isStatic="false" name="elapsedTime" type="groovy.time.TimeDuration">
+<parameters useNamedArguments="false"/>
+<doc/>
 </method>
 </declaringtype>
 </projectSuggestions>
