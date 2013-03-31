@@ -1,9 +1,7 @@
-
 /**
  * Find two items that match exact credit value:
  * http://code.google.com/codejam/contest/351101/dashboard#s=p0
  */
-import groovy.time.*
 
 File inputFile = new File('src/main/resources/store_credit_input.txt')
 File outputFile = new File('store_credit_output.txt').clear()

@@ -1,5 +1,3 @@
-import groovy.time.*
-
 /**
  * Finding the minimum scalar product:
  * http://code.google.com/codejam/contest/32016/dashboard#s=p0

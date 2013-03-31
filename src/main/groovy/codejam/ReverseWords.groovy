@@ -1,6 +1,3 @@
-package codejam;
-
-import groovy.lang.Closure;
 
 import java.io.File;
 
