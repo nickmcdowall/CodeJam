@@ -26,4 +26,4 @@ def findTwoItemsThatSumTotalCredit = { List<String> inputLines ->
 	return indexOfItems.join(" ")
 }
 
-inputFile.codeJam(outputFile, 3, findTwoItemsThatSumTotalCredit)
+outputFile.codeJam(inputFile, 3, findTwoItemsThatSumTotalCredit)

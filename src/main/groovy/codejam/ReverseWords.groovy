@@ -12,5 +12,5 @@ def splitReverseAndJoin = { List<String> input ->
 	input[0].split(" ").reverse().join(" ") 
 }
 
-inputFile.codeJam(outputFile, 1, splitReverseAndJoin)
+outputFile.codeJam(inputFile, 1, splitReverseAndJoin)
 

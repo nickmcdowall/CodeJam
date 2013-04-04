@@ -13,4 +13,4 @@ def calculateMinimumScalarProduct = { List<String> input ->
 	return transpose.sum { it[0].multiply it[1] } 
 }
 
-inputFile.codeJam(outputFile, 3, calculateMinimumScalarProduct)
+outputFile.codeJam(inputFile, 3, calculateMinimumScalarProduct)

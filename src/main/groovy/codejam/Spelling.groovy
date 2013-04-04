@@ -27,7 +27,7 @@ def insertPauses = { String text ->
 		def pattern = /${it}${tempSeparator}${it}/
 		def replacement = "$it $it"
 		text = text.replaceAll(pattern, replacement)
-						.replaceAll(pattern, replacement)
+				.replaceAll(pattern, replacement)
 	}
 	return text
 }
@@ -49,4 +49,4 @@ def convertToButtonPushes = { List<String> inputLines ->
 	return insertPauses(output).replaceAll(tempSeparator, '')
 }
 
-inputFile.codeJam(outputFile, ONE_LINE_AT_A_TIME, convertToButtonPushes)
+outputFile.codeJam(inputFile, ONE_LINE_AT_A_TIME, convertToButtonPushes)

@@ -32,17 +32,17 @@ class CodeJamExtensions {
 		self << "Case #${testNumber}: ${result}\n"
 	}
 
-	public static void codeJam(File self, File outputFile, int linesPerTestCase, Closure function) {
+	public static void codeJam(File self, File inputFile, int linesPerTestCase, Closure givenFunction) {
 		def startTime = new Date()
-		def allLines = self.readLines()
+		def allLines = inputFile.readLines()
 		allLines.remove(0) //First line just lists the number of test cases.
 
 		def testNum = 1
 		allLines.collate(linesPerTestCase).each { List<String> inputLines ->
-			outputFile.addTestCaseResult(testNum++, function(inputLines))
+			self.addTestCaseResult(testNum++, givenFunction(inputLines))
 		}
 		
-		println outputFile.getText()
+		println self.getText()
 		println "Done in ${startTime.elapsedTime()}"
 	}
 

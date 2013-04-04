@@ -11,9 +11,7 @@ repositories {
 
 dependencies {
 	compile 'org.codehaus.groovy:groovy-all:2.0.6'
-//	compile 'nick:CodeJamExtensions:1.0'
-	
+
 	testCompile 'junit:junit:4.+'
-	testCompile 'org.mockito:mockito-all:1.8.4'
 }
 
